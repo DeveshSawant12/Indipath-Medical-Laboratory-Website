@@ -8,37 +8,42 @@ import AdminUploadReport from "./pages/admin/AdminUploadReport";
 import AdminReports from "./pages/admin/AdminReports";
 import AdminNotifications from "./pages/admin/AdminNotifications";
 
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      Component: Home,
+    },
+    {
+      path: "/admin",
+      Component: AdminLogin,
+    },
+    {
+      path: "/admin/dashboard",
+      Component: AdminDashboard,
+    },
+    {
+      path: "/admin/patients",
+      Component: AdminPatients,
+    },
+    {
+      path: "/admin/appointments",
+      Component: AdminAppointments,
+    },
+    {
+      path: "/admin/upload-report",
+      Component: AdminUploadReport,
+    },
+    {
+      path: "/admin/reports",
+      Component: AdminReports,
+    },
+    {
+      path: "/admin/notifications",
+      Component: AdminNotifications,
+    },
+  ],
   {
-    path: "/",
-    Component: Home,
-  },
-  {
-    path: "/admin",
-    Component: AdminLogin,
-  },
-  {
-    path: "/admin/dashboard",
-    Component: AdminDashboard,
-  },
-  {
-    path: "/admin/patients",
-    Component: AdminPatients,
-  },
-  {
-    path: "/admin/appointments",
-    Component: AdminAppointments,
-  },
-  {
-    path: "/admin/upload-report",
-    Component: AdminUploadReport,
-  },
-  {
-    path: "/admin/reports",
-    Component: AdminReports,
-  },
-  {
-    path: "/admin/notifications",
-    Component: AdminNotifications,
-  },
-]);
+    basename: "/Indipath-Medical-Laboratory-Website",
+  }
+);
